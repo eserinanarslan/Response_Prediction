@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "b2ea5d84-0493-4400-a8fc-3b54fbd99128",
+		"name": "Enrian_Response_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1878453"
+	},
+	"item": [
+		{
+			"name": "get_prediction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/get_prediction?id=0059207",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"get_prediction"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0059207"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_predictions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"username\": \"user1\", \"password\": \"password1\"}]"
+				},
+				"url": {
+					"raw": "http://localhost:1001/post_predictions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"post_predictions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_random_records",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/get_random_records?username=user1&password=password1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"get_random_records"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "user1"
+						},
+						{
+							"key": "password",
+							"value": "password1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
